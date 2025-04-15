@@ -91,7 +91,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const signup = async (username: string, email: string, password: string) => {
     try {
-      const response = await api.post('/api/auth/register/', {
+      await api.post('/api/auth/register/', {
         username,
         email,
         password,
@@ -99,9 +99,14 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       
       // After successful registration, login the user
       await login(username, password);
-      
     } catch (error) {
-      console.error('Signup failed:', error);
+      if (axios.isAxiosError(error)) {
+        console.error('Signup failed:', {
+          status: error.response?.status,
+          data: error.response?.data,
+          message: error.message,
+        });
+      }
       throw error;
     }
   };

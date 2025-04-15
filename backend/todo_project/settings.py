@@ -34,7 +34,6 @@ INSTALLED_APPS = [
     
     # Local apps
     'todos',
-    'api',
     'authentication.apps.AuthenticationConfig',
 ]
 

@@ -35,10 +35,13 @@ const TodoList = () => {
       });
       console.log('Todos response:', response.data);
       
-      // Ensure we have an array
+      // Ensure we have an array and sort by created_at in descending order
       const todosData = Array.isArray(response.data) ? response.data : [];
-      console.log('Processed todos data:', todosData);
-      setTodos(todosData);
+      const sortedTodos = todosData.sort((a, b) => 
+        new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+      );
+      console.log('Processed todos data:', sortedTodos);
+      setTodos(sortedTodos);
     } catch (error) {
       console.error('Error fetching todos:', error);
       setError('Failed to fetch todos');
