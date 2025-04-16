@@ -19,7 +19,7 @@ This project was built as part of learning **Tailwind CSS** and implementing **u
 ## 🛠 Tech Stack
 
 - **Frontend:** React, Tailwind CSS
-- **Authentication:** JWT or Django session auth
+- **Authentication:** JWT
 - **Backend:** Django, Django REST Framework (optional)
 - **State Management:** useState / useContext
 - **Tooling:** Vite (or Create React App)
@@ -32,13 +32,13 @@ This project was built as part of learning **Tailwind CSS** and implementing **u
 
 - Node.js and npm
 - Git
-- (If full-stack) Python, Django, PostgreSQL or SQLite
+- Python, Django, PostgreSQL or SQLite
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/todo-list-tailwind-auth.git
-cd todo-list-tailwind-auth
+git clone https://github.com/itsatul/Todo-tailwind.git
+cd Todo-tailwind
 ```
 
 ### 2. Install Frontend Dependencies
@@ -53,7 +53,7 @@ npm install
 npm run dev
 ```
 
-Frontend will be available at: [http://localhost:5173](http://localhost:5173)
+Frontend will be available at: [http://localhost:3000](http://localhost:3000)
 
 ---
 
@@ -67,16 +67,6 @@ pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 ```
-
-API will be available at: [http://localhost:8000](http://localhost:8000)
-
----
-
-## 🖼️ Screenshot
-
-![App Screenshot](./screenshot.png)
-
-> Replace `screenshot.png` with your actual app screenshot in the root.
 
 ---
 
